@@ -18,7 +18,7 @@ const Header: React.FC<HeaderProps> = ({ repoName }) => {
             </div>
             <div>
               <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-100 to-white">
-                GitHub Issue Explorer
+                GitHub Issue tracker
               </h1>
               {repoName && (
                 <div className="text-purple-200 mt-2 font-medium">
