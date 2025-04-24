@@ -1,3 +1,5 @@
+//src/components/metrics/AverageClosureMetric.tsx
+
 import React from "react";
 
 interface AverageClosureMetricProps {

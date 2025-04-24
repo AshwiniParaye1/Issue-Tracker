@@ -1,3 +1,5 @@
+//src/components/IssuesTable.tsx
+
 import { X } from "lucide-react";
 import React, { useState } from "react";
 import { GitHubIssue } from "../types";

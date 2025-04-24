@@ -1,3 +1,5 @@
+//src/components/metrics/ClosureRateMetric.tsx
+
 import React from "react";
 import { WeeklyMetrics } from "../../types";
 import { formatDate } from "../../utils/dateUtils";

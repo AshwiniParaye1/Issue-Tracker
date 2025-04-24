@@ -1,3 +1,5 @@
+//src/types/index.ts
+
 export interface GitHubIssue {
   id: number;
   number: number;

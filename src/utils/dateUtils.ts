@@ -1,3 +1,5 @@
+//src/utils/dateUtils.ts
+
 /**
  * Format a date to a readable string
  */

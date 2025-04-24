@@ -1,3 +1,5 @@
+//src/components/Dashboard.tsx
+
 import { FileText } from "lucide-react";
 import React, { useState } from "react";
 import { GitHubIssue, StatusCounts, WeeklyMetrics } from "../types";
