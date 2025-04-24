@@ -1,54 +1,117 @@
-# React + TypeScript + Vite
+# Issue-Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📝 Description
 
-Currently, two official plugins are available:
+This project is a web application that analyzes GitHub repository issues to provide insights into repository health and issue trends. It fetches issues from a specified GitHub repository, calculates various metrics, and presents them in a user-friendly dashboard. The application is built using React and TypeScript, leveraging Tailwind CSS for styling.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- **Issue Summary:** Provides a high-level overview of the total number of issues, open issues, closed issues.
+- **Weekly Metrics:** Calculates and displays weekly issue counts, closure rates, and the ratio of new to closed issues.
+- **Average Closure Rate:** Shows the average percentage of issues closed per week.
+- **Issue Table:** Allows users to view all issues in a sortable table with details such as status, author, and creation/closure dates.
+- **Repository Input:** Enables users to enter a GitHub repository name (e.g., `facebook/react`) to analyze its issues.
+- **Error Handling:** Displays error messages for invalid repository formats or failed API requests.
+- **Loading State:** Indicates when the application is fetching and analyzing data.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🔧 Technologies Used
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- TypeScript
+- Tailwind CSS
+- React
+- Date-fns
+
+## 📦 Installation
+
+Follow these steps to set up the project locally:
+
+1.  **Clone the repository:**
+
+    ```bash
+    git clone <repository-url>
+    cd <repository-directory>
+    ```
+
+2.  **Install dependencies:**
+
+    ```bash
+    npm install
+    # or
+    yarn install
+    # or
+    pnpm install
+    ```
+
+3.  **Start the development server:**
+
+    ```bash
+    npm start
+    # or
+    yarn start
+    # or
+    pnpm start
+    ```
+
+    The application will be accessible at `http://localhost:5173` (or the port specified by your environment).
+
+## 📂 Project Structure
+
+```
+├── index.html
+├── package.json
+├── public
+├── src
+│   ├── App.tsx
+│   ├── assets
+│   ├── components
+│   │   ├── Dashboard.tsx
+│   │   ├── Header.tsx
+│   │   ├── IssuesTable.tsx
+│   │   ├── RepoForm.tsx
+│   │   ├── metrics
+│   │   │   ├── AverageClosureMetric.tsx
+│   │   │   ├── ClosureRateMetric.tsx
+│   │   │   ├── RatioMetric.tsx
+│   │   │   ├── StatusMetric.tsx
+│   │   │   ├── WeeklyCountMetric.tsx
+│   ├── hooks
+│   │   ├── useGitHubIssues.ts
+│   ├── index.css
+│   ├── main.tsx
+│   ├── services
+│   │   ├── github.ts
+│   ├── types
+│   │   ├── index.ts
+│   ├── utils
+│   │   ├── dateUtils.ts
+│   ├── vite-env.d.ts
+├── tsconfig.app.json
+├── tsconfig.node.json
+├── vite.config.ts
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 How to Use
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1.  **Enter a GitHub Repository:**
+    - In the input field, enter the name of the GitHub repository you want to analyze. Use the format `owner/repo` (e.g., `facebook/react`) or a full GitHub URL.
+2.  **Analyze Issues:**
+    - Click the "Analyze Issues" button. The application will fetch and analyze the issues from the repository. A loading indicator will be displayed while the data is being fetched.
+3.  **View the Dashboard:**
+    - Once the analysis is complete, the dashboard will display the key metrics and issue summary. You can explore the different sections to gain insights into the repository's issue trends.
+4.  **View All Issues:**
+    - Click the "View All Issues" button in the Issue Summary section to open a modal containing a sortable table of all issues.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🤝 Contribution
+
+We welcome contributions! Here's how you can contribute:
+
+1.  Fork the repository.
+2.  Create a new branch for your feature or bug fix.
+3.  Make your changes and commit them.
+4.  Push your changes to your fork.
+5.  Submit a pull request.
+
+## ❤️ Support
+
+Thank you for checking out Issue-Tracker! If you find it useful, consider giving it a star on GitHub!
