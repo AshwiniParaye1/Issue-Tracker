@@ -104,10 +104,10 @@ function App() {
         </div>
       </main>
 
-      <footer className="bg-white/50 backdrop-blur-sm border-t border-purple-100 py-8">
+      <footer className="fixed bottom-0 w-full bg-white/70 backdrop-blur-sm border-t border-purple-100 py-4 z-50 shadow-sm">
         <div className="container mx-auto px-4">
           <p className="text-center text-gray-600 text-sm font-medium">
-            GitHub Issue Explorer — Analyze repository health and issue trends
+            GitHub Issue Tracker — Analyze repository health and issue trends
           </p>
         </div>
       </footer>

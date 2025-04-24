@@ -56,7 +56,7 @@ const IssuesTable: React.FC<IssuesTableProps> = ({ issues, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-      <div className="bg-white rounded-lg shadow-lg max-w-6xl w-full max-h-[90vh] flex flex-col">
+      <div className="bg-white rounded-lg shadow-lg max-w-6xl w-full max-h-[80vh] flex flex-col">
         <div className="p-4 border-b border-gray-200 flex justify-between items-center">
           <h2 className="text-xl font-semibold text-gray-800">
             Repository Issues
